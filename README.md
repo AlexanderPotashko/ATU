@@ -1,10 +1,11 @@
-# User story
-- As user I would like to see list of posts available by api -  https://jsonplaceholder.typicode.com/
-- As user I would like to see post details with: title, post author, description
+## Development
 
+- `npm start`
+  - Start the dev server at [http://localhost:3000](http://localhost:3000)
+- `npm test`
+  - Start `jest` in watch mode
 
-# Recomendations
-- Use facebook/create-react-app as setup
-- Use react js to render html
-- Use React Router 4 for routing
-- Basic Responsive design using SCSS (no tools like material ui)
+## Production
+
+- `npm run build && npm run start-prod`
+  - Bundle the JS and fire up the Express server for production

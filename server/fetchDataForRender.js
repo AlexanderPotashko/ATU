@@ -1,12 +1,18 @@
 import url from 'url'
 import { matchPath } from 'react-router-dom'
 
-import HomePage from '../src/components/pages/Home'
+import Posts from '../src/components/containers/Posts'
+import Comments from '../src/components/containers/Comments'
 
 const ROUTES_THAT_FETCH_DATA = [
   {
     path: '/',
-    component: HomePage,
+    component: Posts,
+    exact: true
+  },
+  {
+    path: '/posts/:id',
+    component: Comments,
     exact: true
   }
 ]

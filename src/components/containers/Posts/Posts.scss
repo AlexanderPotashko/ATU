@@ -1,0 +1,21 @@
+@import '../../../scss/grid';
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  @include column(12);
+  @include media-breakpoint-up(sm) {
+    @include column(6);
+  }
+  @include media-breakpoint-up(lg) {
+    @include column(4);
+  }
+  padding: .2em;
+
+  & > a {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../scss/variables';
+
+.item {
+  padding: 1em;
+  color: $color-prime; 
+}
+
+.title {
+  font-weight: 700;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.text {
+  position: relative;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}

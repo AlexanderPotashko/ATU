@@ -13,7 +13,17 @@ const wrapperRequest = (endpoint) => request(`https://jsonplaceholder.typicode.c
 
 const apiRouter = express.Router()
 
+apiRouter.use('/api/comments', (req, res) => {
+  console.log('/api/comments')
+  const postId = req.body.id
+
+  wrapperRequest(`comments?postId=${postId}`).then((data) => {
+    res.send(data)
+  })
+})
+
 apiRouter.use('/api/:source', (req, res) => {
+  console.log('/api/:source')
   const source = req.params.source
 
   wrapperRequest(source).then((data) => {

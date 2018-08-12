@@ -1,6 +1,7 @@
 import os from 'os'
 import path from 'path'
 import express from 'express'
+import bodyParser from 'body-parser'
 import compression from 'compression'
 import helmet from 'helmet'
 import webpack from 'webpack'
@@ -93,8 +94,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.use(morgan('tiny'))
+app.use(bodyParser.json())
 
-app.get('/api/*', apiRouter)
+app.use(apiRouter)
 app.get('*', renderServerSideApp)
 
 export default app

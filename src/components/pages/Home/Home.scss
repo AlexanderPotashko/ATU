@@ -1,21 +1,5 @@
-@import '../../../scss/grid';
+@import '../../../scss/mixin';
 
 .container {
-  @include container();
-
-  padding: 1em;
-}
-
-.postItem {
-  @include row()
-
-  padding-top: 1em;
-}
-
-.postItemTitle {
-  @inlude columns(12)
-}
-
-.postItemText {
-  @inlude columns(12)
+  @include page-container();
 }

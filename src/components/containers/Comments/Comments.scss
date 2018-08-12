@@ -1,0 +1,28 @@
+@import '../../../scss/grid';
+@import '../../../scss/variables';
+
+.container {
+  position: relative;
+}
+
+.item {
+  @include column(12);
+
+  padding: .2em;
+}
+
+.comments {
+  background: $color-background;
+  border: 1px solid $color-border;
+  margin-top: 1.5em;
+  color: $color-prime;
+}
+
+.commentsHeader {
+  padding: 1em;
+  border-bottom: 1px solid $color-border;
+}
+
+.comment {
+}
+

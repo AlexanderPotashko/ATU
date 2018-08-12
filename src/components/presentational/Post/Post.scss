@@ -1,0 +1,43 @@
+@import '../../../scss/grid';
+@import '../../../scss/variables';
+
+.item {
+  min-height: 10em;
+  position: relative;
+  background: $color-background;
+  padding: 1em;
+  border: 1px solid $color-border;
+  margin-top: 1.5em;
+  color: $color-prime;
+
+  @include media-breakpoint-up(sm) {
+    min-height: 14em;
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 10em;
+  }
+}
+
+.author {
+  position: absolute;
+  top: -1.5em;
+  line-height: 1.5;
+  font-size: .8em;
+}
+
+.title {
+  font-weight: 600;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.text {
+  margin-top: .2em;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}

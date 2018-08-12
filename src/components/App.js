@@ -13,13 +13,6 @@ const LoadableHome = Loadable({
   }
 })
 
-const LoadableGrid = Loadable({
-  loader: () => import(/* webpackChunkName: 'gridPage' */ './pages/Grid'),
-  loading() {
-    return <div>Loading...</div>;
-  }
-})
-
 const LoadableAbout = Loadable({
   loader: () => import(/* webpackChunkName: 'aboutPage' */ './pages/About'),
   loading() {
@@ -41,9 +34,6 @@ const App = () => (<div className='app'>
       <NavLink exact to="/" activeClassName="active">
         Home
       </NavLink>
-      <NavLink exact to="/grid" activeClassName="active">
-        Flexbox Grid
-      </NavLink>
       <NavLink exact to="/about" activeClassName="active">
         About
       </NavLink>
@@ -52,7 +42,7 @@ const App = () => (<div className='app'>
   <div>
   <Switch>
     <Route exact path='/' component={LoadableHome} />
-    <Route path='/grid' component={LoadableGrid} />
+    <Route exact path='/posts/:id' component={LoadableHome} />
     <Route path='/about' component={LoadableAbout} />
   </Switch>
   </div>
